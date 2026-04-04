@@ -11,7 +11,7 @@
   # ─── Pacotes pessoais ────────────────────────────────────────────────────────
   # Adicione aqui os programas que são só seus (não do sistema inteiro).
   home.packages = with pkgs; [
-    ghostty
+    kitty
     vscode
     tree
   ];

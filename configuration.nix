@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.dms.nixosModules.dank-material-shell
   ];
 
   # ─── Boot ────────────────────────────────────────────────────────────────────
@@ -40,8 +39,8 @@
     layout  = "us";
     variant = "intl";
   };
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   console.keyMap = "us-acentos";
 
@@ -67,7 +66,6 @@
 
   # ─── Programas ───────────────────────────────────────────────────────────────
   programs.firefox.enable = true;
-  programs.dank-material-shell.enable = true;
 
   # Pacotes instalados globalmente (prefira home.nix para pacotes pessoais)
   environment.systemPackages = with pkgs; [
